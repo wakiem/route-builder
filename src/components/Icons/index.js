@@ -15,8 +15,8 @@ export const BarsIcon = (props) => {
   return convert(barsIcon.abstract[0], props);
 };
 
-/* UTILS */
-/* ***** */
+// UTILS
+// Disclaimer: Very (very) strongly inspired by https://github.com/FortAwesome/react-fontawesome
 
 function _isNumerical(obj) {
   obj = obj - 0
@@ -31,7 +31,7 @@ function camelize(string) {
   }
 
   // eslint-disable-next-line no-useless-escape
-  string = string.replace(/[\-_\s]+(.)?/g, function(match, chr) {
+  string = string.replace(/[\-_\s]+(.)?/g, function (match, chr) {
     return chr ? chr.toUpperCase() : ''
   })
 
