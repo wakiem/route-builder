@@ -1,4 +1,5 @@
 #download-button {
+  margin: 15px;
   background-color: #C3E452;
   color: #2B3313;
   padding: 10px;
@@ -6,6 +7,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  #download-button {
+    margin: 50px 15px 15px 15px;
+  }
 }
 
 #download-button:disabled {

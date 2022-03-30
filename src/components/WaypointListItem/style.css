@@ -1,19 +1,23 @@
 #waypoint-list li {
   display: flex;
   flex-direction: row;
-  padding: 10px 0px;
+  padding: 10px 15px;
 }
 
-#waypoint-list li *:first-child,
-#waypoint-list li *:last-child {
+#waypoint-list li > *:first-child,
+#waypoint-list li > *:last-child {
   color: #666666;
 }
 
-#waypoint-list li *:first-child:hover {
+#waypoint-list li > *:first-child:hover {
   cursor: grab;
 }
 
-#waypoint-list li *:nth-child(2) {
+#waypoint-list li > *:last-child {
+  cursor: pointer;
+}
+
+#waypoint-list li > *:nth-child(2) {
   flex: 1;
   margin: 0px 5px;
 }

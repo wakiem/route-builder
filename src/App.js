@@ -6,6 +6,8 @@ import Map from './components/Map';
 
 import Waypoint from './utils/waypoint';
 
+import './App.css';
+
 const App = () => {
 
   const [state, setState] = useState({ waypoints: [], nextWayPointId: 1 });
@@ -40,7 +42,7 @@ const App = () => {
   return (
     <React.Fragment>
       <div id="sidebar-container">
-        <h1>Route Builder</h1>
+        <h1 id="app-title">Route Builder</h1>
         <WaypointList waypoints={state.waypoints} deleteWaypoint={deleteWaypoint} reorderWaypoints={reorderWaypoints} />
         <DownloadButton waypoints={state.waypoints} disabled={state.waypoints.length < 2} />
       </div>

@@ -1,0 +1,40 @@
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar-container {
+  height: 320px;
+  max-height: 35%;
+  display: flex;
+  flex-direction: column;
+  background-color: #383838;
+}
+
+#app-title {
+  margin: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #666666;
+}
+
+#map-container {
+  flex: 1;
+}
+
+@media (min-width: 576px) {
+  #app {
+    flex-direction: row;
+  }
+
+  #sidebar-container {
+    height: unset;
+    max-height: unset;
+    width: 320px;
+    max-width: 35%;
+  }
+
+  #app-title {
+    margin: 15px 15px 50px 15px;
+  }
+}
