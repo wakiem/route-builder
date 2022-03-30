@@ -11,7 +11,7 @@ const DownloadButton = (props) => {
     let fileContent = convertWaypointsToGpx(props.waypoints);;
     var a = document.createElement('a');
     a.download = fileName;
-    a.href = URL.createObjectURL(new File([fileContent], fileName, { type: 'application/xml' }));
+    a.href = URL.createObjectURL(new File([fileContent], fileName, { type: 'application/gpx+xml' }));
     document.body.appendChild(a); // Required for FF
     a.click();
   }
