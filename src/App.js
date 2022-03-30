@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import WaypointList from './components/WaypointList';
 import DownloadButton from './components/DownloadButton';
@@ -37,16 +37,18 @@ const App = () => {
     });
   }
 
-  return [
-    <div id="sidebar-container">
-      <h1>Route Builder</h1>
-      <WaypointList waypoints={state.waypoints} deleteWaypoint={deleteWaypoint} reorderWaypoints={reorderWaypoints} />
-      <DownloadButton waypoints={state.waypoints} disabled={state.waypoints.length < 2} />
-    </div>,
-    <div id="map-container">
-      <Map waypoints={state.waypoints} addWaypoint={addWaypoint} />
-    </div>
-  ];
+  return (
+    <React.Fragment>
+      <div id="sidebar-container">
+        <h1>Route Builder</h1>
+        <WaypointList waypoints={state.waypoints} deleteWaypoint={deleteWaypoint} reorderWaypoints={reorderWaypoints} />
+        <DownloadButton waypoints={state.waypoints} disabled={state.waypoints.length < 2} />
+      </div>
+      <div id="map-container">
+        <Map waypoints={state.waypoints} addWaypoint={addWaypoint} />
+      </div>
+    </React.Fragment>
+  );
 
 }
 
