@@ -6,6 +6,7 @@
 
 #sidebar-container {
   height: 320px;
+  min-height: 200px;
   max-height: 35%;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,8 @@
   }
 
   #sidebar-container {
-    height: unset;
+    height: 100%;
+    min-height: unset;
     max-height: unset;
     width: 320px;
     max-width: 35%;
@@ -36,5 +38,9 @@
 
   #app-title {
     margin: 15px 15px 50px 15px;
+  }
+
+  #map-container {
+    height: 100%;
   }
 }
