@@ -9,7 +9,6 @@ const MAP_TILE = L.tileLayer(`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 });
 
 const MAP_PARAMS = {
-  center: [0, 0],
   zoom: 16,
   zoomControl: false,
   layers: [MAP_TILE]
@@ -25,7 +24,7 @@ const Map = (props) => {
     // Set reference to map
     mapRef.current = L.map('map', MAP_PARAMS);
     // Ask user's position and center map on that position
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function (position) {
       mapRef.current.setView([position.coords.latitude, position.coords.longitude]);
     });
     // Add onClick handler to map
