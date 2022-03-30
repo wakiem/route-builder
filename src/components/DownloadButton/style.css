@@ -1,0 +1,13 @@
+#download-button {
+  background-color: #C3E452;
+  color: #2B3313;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#download-button:disabled {
+  opacity: 0.5;
+}

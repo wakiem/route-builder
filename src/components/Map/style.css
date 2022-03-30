@@ -1,0 +1,13 @@
+#map {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.waypoint-marker {
+  border-radius: 50%;
+  background-color: #383838;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
