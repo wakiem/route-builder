@@ -15,7 +15,7 @@ h1 {
   margin-bottom: 50px;
 }
 
-#root {
+#app {
   display: flex;
   flex-direction: row;
 }
