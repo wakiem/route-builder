@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/route-builder/static/css/main.48a8b0ea.css",
+    "main.js": "/route-builder/static/js/main.07fc8bb8.js",
+    "index.html": "/route-builder/index.html",
+    "main.48a8b0ea.css.map": "/route-builder/static/css/main.48a8b0ea.css.map",
+    "main.07fc8bb8.js.map": "/route-builder/static/js/main.07fc8bb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48a8b0ea.css",
+    "static/js/main.07fc8bb8.js"
+  ]
+}
