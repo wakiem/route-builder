@@ -1,11 +1,12 @@
 import React from 'react';
 import { library, icon } from '@fortawesome/fontawesome-svg-core'
-import { faTrash, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faTrash, faBars);
+library.add(faTrash, faBars, faXmark);
 
 const trashIcon = icon({ prefix: 'fas', iconName: 'trash' });
 const barsIcon = icon({ prefix: 'fas', iconName: 'bars' });
+const xmarkIcon = icon({ prefix: 'fas', iconName: 'xmark' });
 
 export const TrashIcon = (props) => {
   return convert(trashIcon.abstract[0], props);
@@ -13,6 +14,10 @@ export const TrashIcon = (props) => {
 
 export const BarsIcon = (props) => {
   return convert(barsIcon.abstract[0], props);
+};
+
+export const XmarkIcon = (props) => {
+  return convert(xmarkIcon.abstract[0], props);
 };
 
 // UTILS

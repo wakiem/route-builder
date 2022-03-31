@@ -1,12 +1,26 @@
 #waypoint-list li {
   display: flex;
+  align-items: center;
   flex-direction: row;
   padding: 10px 15px;
+}
+
+#waypoint-list li[draggable="true"] {
+  background-color: #3D3D3D;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 25%);
 }
 
 #waypoint-list li > *:first-child,
 #waypoint-list li > *:last-child {
   color: #666666;
+}
+
+#waypoint-list li > *:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  touch-action: none;
 }
 
 #waypoint-list li > *:first-child:hover {

@@ -13,11 +13,13 @@ const WaypointList = (props) => {
       {props.waypoints.map((waypoint, index) => (
         <WaypointListItem
           key={waypoint.id}
+          index={index}
           text={`Waypoint ${waypoint.id}`}
           handleDelete={() => props.deleteWaypoint(waypoint)}
           handleDragStart={() => setDraggedWaypoint(waypoint)}
           handleDragEnter={() => props.reorderWaypoints(draggedWaypoint, index)}
           handleDragEnd={() => setDraggedWaypoint(null)}
+          handleTouchMove={(indexOfHoveredWaypoint) => props.reorderWaypoints(draggedWaypoint, indexOfHoveredWaypoint)}
         />
       ))}
     </ul>

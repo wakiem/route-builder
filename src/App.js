@@ -7,9 +7,11 @@ import Map from './components/Map';
 import Waypoint from './utils/waypoint';
 
 import './App.css';
+import { BarsIcon, XmarkIcon } from './components/Icons';
 
 const App = () => {
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [state, setState] = useState({ waypoints: [], nextWayPointId: 1 });
 
   const addWaypoint = (lat, lng) => {
@@ -41,7 +43,13 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <div id="sidebar-container">
+      <button id="open-sidebar-container" onClick={() => setIsSidebarOpen(true)}>
+        <BarsIcon className="fa-1x" />
+      </button>
+      <div id="sidebar-container" className={isSidebarOpen ? 'opened' : null}>
+        <button id="close-sidebar-container" onClick={() => setIsSidebarOpen(false)}>
+          <XmarkIcon className="fa-1x" />
+        </button>
         <h1 id="app-title">Route Builder</h1>
         <WaypointList waypoints={state.waypoints} deleteWaypoint={deleteWaypoint} reorderWaypoints={reorderWaypoints} />
         <DownloadButton waypoints={state.waypoints} disabled={state.waypoints.length < 2} />
