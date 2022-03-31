@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { BarsIcon, XmarkIcon } from './components/Icons';
 import WaypointList from './components/WaypointList';
 import DownloadButton from './components/DownloadButton';
 import Map from './components/Map';
@@ -7,7 +8,6 @@ import Map from './components/Map';
 import Waypoint from './utils/waypoint';
 
 import './App.css';
-import { BarsIcon, XmarkIcon } from './components/Icons';
 
 const App = () => {
 
