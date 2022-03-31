@@ -34,7 +34,17 @@ const Map = (props) => {
         mapRef.current = L.map('map', { ...MAP_PARAMS, center: latlng });
         // Add onClick handler to map
         mapRef.current.on('click', (e) => {
-          props.addWaypoint(e.latlng.lat, e.latlng.lng);
+          if (e.originalEvent.isTrusted) {
+            // There's a bug in Leaflet on Safari desktop:
+            // One click on the map will generate 2 click events
+            // - one time with isTrusted = true
+            // - one time with isTrusted = false
+            // The click event on chrome etc has isTrusted = true
+            // So filtering out these Safari double click events here
+            // See https://github.com/Leaflet/Leaflet/issues/7887
+            // and https://github.com/Leaflet/Leaflet/issues/7255
+            props.addWaypoint(e.latlng.lat, e.latlng.lng);
+          }
         });
         // Add the layer on which we draw the waypoints and the route
         layerRef.current = L.layerGroup().addTo(mapRef.current);
